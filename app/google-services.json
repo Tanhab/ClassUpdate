@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1034048537042",
+    "firebase_url": "https://class-update-41265.firebaseio.com",
+    "project_id": "class-update-41265",
+    "storage_bucket": "class-update-41265.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1034048537042:android:62a5e1a119fe772b61080b",
+        "android_client_info": {
+          "package_name": "com.example.classupdate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1034048537042-ptkugq9tkvoi0f5jm4ravkecah2tsc7r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADhp6XFTy-MaH6f2BpocX5nFlT57of46E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1034048537042-ptkugq9tkvoi0f5jm4ravkecah2tsc7r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

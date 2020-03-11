@@ -48,6 +48,11 @@
         android:text="Login"
         android:id="@+id/btnLogin"
         />
+    <com.google.android.gms.common.SignInButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnGoogle"
+        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
