@@ -6,19 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
     android:orientation="vertical"
+    android:background="@android:color/white"
     android:gravity="center"
     android:padding="20dp">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view1"
+        android:layout_gravity="center"
+        android:layout_width="315dp"
+        android:layout_height="198dp"
+        android:scrollbarSize="40dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="start.json"
+        app:lottie_loop="true" />
+<ImageView
+    android:layout_width="200dp"
+    android:layout_height="50dp"
+    app:srcCompat="@drawable/caption">
+
+</ImageView>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:errorEnabled="true"
+        android:layout_marginTop="10dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:textColorHint="#2196F3"
         android:hint="Enter your Email">
+
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/txtEmailInput"
+            android:textColor="@android:color/black"
             android:inputType="textWebEmailAddress"
             >
 
@@ -30,32 +50,46 @@
         android:layout_height="wrap_content"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:hint="Enter your password"
+        android:textColorHint="#2196F3"
         app:errorEnabled="true"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="5dp">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
             android:inputType="textPassword"
             android:id="@+id/txtPasswordInput"
             >
         </com.google.android.material.textfield.TextInputEditText>
 
     </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/txtForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="Forgot password?Reset here"/>
+
+
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+        android:background="@drawable/buttonshape"
         android:text="Login"
+        android:textStyle="bold"
         android:id="@+id/btnLogin"
         />
     <com.google.android.gms.common.SignInButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:id="@+id/btnGoogle"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
         android:text="Don't have an account?Create one here"
         android:layout_marginTop="10dp"
         android:id="@+id/txtCreateAccount"

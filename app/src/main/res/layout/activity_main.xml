@@ -1,31 +1,312 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/appbar1"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:contentScrim="@color/colorPrimary"
+            app:title="@string/app_name"
+            app:titleEnabled="true"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:srcCompat="@drawable/bg3"
+                android:scaleType="centerCrop"/>
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
 
 
-    <com.google.android.material.button.MaterialButton
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
         android:id="@+id/btnLogout"
-        android:layout_marginTop="10dp"
-        android:text="Logout"
-        android:textAllCaps="false"
+        android:src="@drawable/btn3"
+        app:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+        app:layout_anchor="@id/appbar1"
+        app:layout_anchorGravity="bottom|right|end" />
 
-        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/c11">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="10dp"
+                    android:id="@+id/cardClassRoutine"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/animation_view1"
+                            android:layout_gravity="center"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:scrollbarSize="40dp"
+                            app:lottie_autoPlay="true"
+                            app:lottie_fileName="classr.json"
+                            app:lottie_loop="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:text="Class routine"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="10dp"
+                    android:id="@+id/cardNotification"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/animation_view2"
+                            android:layout_gravity="center"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:scrollbarSize="40dp"
+                            app:lottie_autoPlay="true"
+                            app:lottie_fileName="exam.json"
+                            app:lottie_loop="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:text="Notifications"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="10dp"
+                    android:id="@+id/cardExamRoutine"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/animation_view3"
+                            android:layout_gravity="center"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:scrollbarSize="40dp"
+                            app:lottie_autoPlay="true"
+                            app:lottie_fileName="notification.json"
+                            app:lottie_loop="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:text="Exam Routine"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="10dp"
+                    android:id="@+id/cardResources"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/animation_view4"
+                            android:layout_gravity="center"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:scrollbarSize="40dp"
+                            app:lottie_autoPlay="true"
+                            app:lottie_fileName="resources1.json"
+                            app:lottie_loop="true" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:text="Resources"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="10dp"
+                    android:id="@+id/cardCR"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/animation_view5"
+                            android:layout_gravity="center"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:scrollbarSize="40dp"
+                            app:lottie_autoPlay="true"
+                            app:lottie_fileName="chat.json"
+                            app:lottie_loop="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:text="CR Zone"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="10dp"
+                    android:id="@+id/cardProfile"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/animation_view6"
+                            android:layout_gravity="center"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:scrollbarSize="40dp"
+                            app:lottie_autoPlay="true"
+                            app:lottie_fileName="profile.json"
+                            app:lottie_loop="true" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:text="Profile"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <!--<com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnLogout"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="155dp"
+            android:text="Logout"
+            android:textAllCaps="false"
+
+            />
+
+
 
 </LinearLayout>
+    -->
