@@ -17,6 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter your Email"
+            android:inputType="textWebEmailAddress"
+            android:singleLine="true"
             android:id="@+id/txtEmailInp"
             >
 
@@ -32,6 +34,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="textPassword"
             android:hint="Enter your password"
             android:id="@+id/txtPasswordInp"
             >
@@ -47,6 +51,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="textPassword"
             android:hint="Confirm your password"
             android:id="@+id/txtPasswordConfirm"
             >

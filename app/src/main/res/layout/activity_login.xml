@@ -38,6 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/txtEmailInput"
+            android:singleLine="true"
             android:textColor="@android:color/black"
             android:inputType="textWebEmailAddress"
             >
@@ -56,6 +57,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:singleLine="true"
             android:textColor="@android:color/black"
             android:inputType="textPassword"
             android:id="@+id/txtPasswordInput"
