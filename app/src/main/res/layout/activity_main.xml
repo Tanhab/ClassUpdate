@@ -1,90 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
+    <ImageView
         android:id="@+id/appbar1"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-            app:contentScrim="@color/colorPrimary"
-            app:title="@string/app_name"
-            app:titleEnabled="true"
-            >
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                app:srcCompat="@drawable/bg3"
-                android:scaleType="centerCrop"/>
-            <androidx.appcompat.widget.Toolbar
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
-
-
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/bg3" />
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/classroom"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class Update"
+        android:layout_marginTop="115dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"/>
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
-        android:id="@+id/btnLogout"
         android:src="@drawable/btn3"
+
         app:backgroundTint="@color/common_google_signin_btn_text_dark_default"
-        app:layout_anchor="@id/appbar1"
-        app:layout_anchorGravity="bottom|right|end" />
+        />-->
 
-
-
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        >
+        android:orientation="vertical">
+
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:id="@+id/c11">
+            android:layout_height="0dp"
+            android:layout_marginTop="155dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="160dp"
-                    android:layout_height="190dp"
-                    android:layout_margin="10dp"
                     android:id="@+id/cardClassRoutine"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:clickable="true">
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_margin="20dp"
+                    app:cardElevation="10dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <com.airbnb.lottie.LottieAnimationView
-                            android:id="@+id/animation_view1"
+
                             android:layout_gravity="center"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
@@ -96,29 +88,29 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:layout_marginTop="10dp"
-                            android:text="Class routine"/>
+                            android:text="Class routine"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="160dp"
-                    android:layout_height="190dp"
-                    android:layout_margin="10dp"
-                    android:id="@+id/cardNotification"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:clickable="true">
+                    android:id="@+id/cardExamRoutine"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_margin="20dp"
+                    app:cardElevation="10dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <com.airbnb.lottie.LottieAnimationView
-                            android:id="@+id/animation_view2"
+
                             android:layout_gravity="center"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
@@ -130,27 +122,62 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:layout_marginTop="10dp"
-                            android:text="Notifications"/>
+                            android:text="Exam routine"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardCR"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_margin="20dp"
+                    app:cardElevation="10dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.airbnb.lottie.LottieAnimationView
+
+                            android:layout_gravity="center"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:scrollbarSize="40dp"
+                            app:lottie_autoPlay="true"
+                            app:lottie_fileName="cr.json"
+                            app:lottie_loop="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CR Zone"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="160dp"
-                    android:layout_height="190dp"
-                    android:layout_margin="10dp"
-                    android:id="@+id/cardExamRoutine"
-                    android:foreground="?attr/selectableItemBackground"
+                    android:id="@+id/cardNotification"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_margin="20dp"
+                    app:cardElevation="10dp"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true">
 
                     <LinearLayout
@@ -160,7 +187,7 @@
                         android:gravity="center">
 
                         <com.airbnb.lottie.LottieAnimationView
-                            android:id="@+id/animation_view3"
+
                             android:layout_gravity="center"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
@@ -173,18 +200,18 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
-                            android:layout_marginTop="10dp"
-                            android:text="Exam Routine"/>
+                            android:text="Notification"/>
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="160dp"
-                    android:layout_height="190dp"
-                    android:layout_margin="10dp"
                     android:id="@+id/cardResources"
-                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_margin="20dp"
+                    app:cardElevation="10dp"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true">
 
                     <LinearLayout
@@ -194,7 +221,6 @@
                         android:gravity="center">
 
                         <com.airbnb.lottie.LottieAnimationView
-                            android:id="@+id/animation_view4"
                             android:layout_gravity="center"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
@@ -202,63 +228,23 @@
                             app:lottie_autoPlay="true"
                             app:lottie_fileName="resources1.json"
                             app:lottie_loop="true" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
-                            android:layout_marginTop="10dp"
                             android:text="Resources"/>
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="160dp"
-                    android:layout_height="190dp"
-                    android:layout_margin="10dp"
-                    android:id="@+id/cardCR"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:clickable="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center">
-
-                        <com.airbnb.lottie.LottieAnimationView
-                            android:id="@+id/animation_view5"
-                            android:layout_gravity="center"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:scrollbarSize="40dp"
-                            app:lottie_autoPlay="true"
-                            app:lottie_fileName="chat.json"
-                            app:lottie_loop="true" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:textStyle="bold"
-                            android:text="CR Zone"/>
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="160dp"
-                    android:layout_height="190dp"
-                    android:layout_margin="10dp"
                     android:id="@+id/cardProfile"
-                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_margin="20dp"
+                    app:cardElevation="10dp"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true">
 
                     <LinearLayout
@@ -268,7 +254,6 @@
                         android:gravity="center">
 
                         <com.airbnb.lottie.LottieAnimationView
-                            android:id="@+id/animation_view6"
                             android:layout_gravity="center"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
@@ -277,36 +262,21 @@
                             app:lottie_fileName="profile.json"
                             app:lottie_loop="true" />
 
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
                             android:textStyle="bold"
                             android:text="Profile"/>
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
             </LinearLayout>
+
+
         </LinearLayout>
 
-    </ScrollView>
 
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-        <!--<com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnLogout"
-            android:layout_marginTop="2dp"
-            android:layout_marginLeft="155dp"
-            android:text="Logout"
-            android:textAllCaps="false"
-
-            />
-
-
-
-</LinearLayout>
-    -->
+    </LinearLayout>
+</RelativeLayout>
