@@ -63,12 +63,7 @@
         </com.google.android.material.textfield.TextInputEditText>
 
     </com.google.android.material.textfield.TextInputLayout>
-    <TextView
-        android:id="@+id/txtForgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-        android:text="Forgot password?Reset here"/>
+
 
 
 
@@ -86,6 +81,13 @@
         android:layout_marginTop="5dp"
         android:id="@+id/btnGoogle"
         />
+    <TextView
+        android:id="@+id/txtForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="10dp"
+        android:text="Forgot password?Reset here"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
