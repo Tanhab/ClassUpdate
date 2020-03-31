@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Student{
-    private String nickname;
+    private String name;
     private String email;
     private String phoneNumber;
     private String bloodGroup;
@@ -12,7 +12,7 @@ public class Student{
     private String uId;
 
     private Student(Builder builder){
-        this.nickname=builder.nickname;
+        this.name=builder.name;
         this.email=builder.email;
         this.phoneNumber=builder.phoneNumber;
         this.bloodGroup=builder.bloodGroup;
@@ -21,18 +21,20 @@ public class Student{
     }
 
     public static Builder getBuilder(){
+
         return new Student.Builder();
     }
+
     public static class Builder{
-        private String nickname;
+        private String name;
         private String email;
         private String phoneNumber;
         private String bloodGroup;
         private String url;
         private String uId;
 
-        Builder withNickname(String nickname){
-            this.nickname=nickname;
+        Builder withName(String name){
+            this.name=name;
             return this;
         }
 
@@ -65,13 +67,61 @@ public class Student{
     }
     Map<String, Object> toMap(){
         Map<String,Object> map = new HashMap<>();
-        map.put("nickname",nickname);
+        map.put("name",name);
         map.put("email",email);
         map.put("phoneNumber",phoneNumber);
         map.put("bloodGroup",bloodGroup);
         map.put("url",url);
         map.put("uId",uId);
         return map;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getBloodGroup() {
+        return bloodGroup;
+    }
+
+    public void setBloodGroup(String bloodGroup) {
+        this.bloodGroup = bloodGroup;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getuId() {
+        return uId;
+    }
+
+    public void setuId(String uId) {
+        this.uId = uId;
     }
 }
 

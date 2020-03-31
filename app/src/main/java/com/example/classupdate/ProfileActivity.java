@@ -138,7 +138,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         String email= Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getEmail();
         Student student= Student.getBuilder()
-                .withNickname(txtName.getText().toString().trim())
+                .withName(txtName.getText().toString().trim())
                 .withPhoneNumber(txtPhnNo.getText().toString().trim())
                 .withEmail(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getEmail())
                 .withBloodGroup(txtBloodGroup.getText().toString().trim().toUpperCase())
